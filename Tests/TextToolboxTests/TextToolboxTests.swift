@@ -281,4 +281,16 @@ final class TextToolboxTests: XCTestCase {
         XCTAssertFalse(TextScanner(string: "12345\n \n").isEmptyLine())
         XCTAssertFalse(TextScanner(string: "1\n\n").isEmptyLine())
     }
+    
+    func testRandomEmoji() {
+        print(String.randomEmoji)
+        print(String.randomEmoji)
+        print(String.randomEmoji)
+        print(String.randomEmoji)
+        print(String.randomEmoji)
+        print(String.randomEmoji)
+        print(String.randomEmoji)
+        print(String.randomEmoji)
+        print(String.randomEmoji)
+    }
 }
