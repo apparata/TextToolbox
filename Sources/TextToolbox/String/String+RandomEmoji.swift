@@ -6,7 +6,7 @@ import Foundation
 
 extension String{
     
-    static var randomEmoji: String {
+    public static var randomEmoji: String {
         
         let emojiRanges: [ClosedRange<Int>] = [
             0x1f600...0x1f64f,
