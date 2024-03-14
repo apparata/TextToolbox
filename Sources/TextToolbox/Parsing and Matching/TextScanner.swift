@@ -115,7 +115,7 @@ public final class TextScanner {
                             limitedBy: endIndex) ?? endIndex
     }
 
-    func reset() {
+    public func reset() {
         currentIndex = startIndex
     }
     
@@ -369,7 +369,17 @@ public final class TextScanner {
         }
         return string + newLine
     }
-        
+
+    /// Scan an integer
+    public func scanInt() -> Int? {
+        scanner.scanInt()
+    }
+
+    /// Scan a float
+    public func scanFloat() -> Float? {
+        scanner.scanFloat()
+    }
+
     // MARK: - Skipping
     
     /// Skip the string, starting at the current position.
