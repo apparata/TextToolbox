@@ -66,8 +66,9 @@ public final class Lexer<Token> {
     /// - returns: Array of tokens.
     public func tokenize(_ string: String) throws -> [Token] {
         var tokens = [Token]()
-        
-        var range: CountableRange<Int> = 0 ..< string.count
+        let count = string.count
+
+        var range: CountableRange<Int> = 0 ..< count
         while !range.isEmpty {
             var ruleMatched = false
             for (regex, tokenFactory, rangedTokenFactory) in rules {
@@ -76,7 +77,7 @@ public final class Lexer<Token> {
                         tokens.append(token)
                     }
                     ruleMatched = true
-                    range = tokenRange.upperBound ..< string.count
+                    range = tokenRange.upperBound ..< count
                     break
                 }
             }
